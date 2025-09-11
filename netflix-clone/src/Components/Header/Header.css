@@ -1,0 +1,105 @@
+/* Outer container */
+.header_outer_container {
+ position:sticky;
+top: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+/* background-color: rgb(148, 132, 132); */
+background-color: rgb(20, 20, 20);
+background-color: transparent;
+height: 10vh;
+color: white;
+transition:all 0.5s;
+transition-timing-function: ease-in;
+z-index: 1;
+background-color: black;
+}
+
+/* Optional: add a darker background when scrolling */
+.nav_black {
+  background-color: rgb(20, 20, 20);
+}
+
+/* Inner container */
+.header_container {
+  width: 90%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+/* Logo */
+.logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* Nav left & right */
+.navLeft,
+.navRight {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px; /* better spacing than margin-left */
+}
+
+/* Nav links */
+.navLeft li,
+.navRight li {
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.navLeft li:first-child {
+  margin-left: 0;
+}
+
+.navLeft li:hover,
+.navRight li:hover {
+  color: #e50914; /* Netflix red hover */
+}
+
+/* Hover underline effect */
+.navLeft li::after,
+.navRight li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.2s ease;
+}
+
+.navLeft li:hover::after,
+.navRight li:hover::after {
+  width: 100%;
+}
+
+/* Right nav icons alignment */
+.navRight li {
+  display: flex;
+  align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 960px) {
+  .header_outer_container {
+    height: 56px;
+  }
+  .header_container {
+    width: 95%;
+  }
+  .navLeft li,
+  .navRight li {
+    font-size: 0.9rem;
+    gap: 12px;
+  }
+}
