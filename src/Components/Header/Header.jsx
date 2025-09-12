@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./header.css";
+import "./Header.css";
 import NetflixLogo from "../../assets/7124274_netflix_logo_icon.png";
 import {
   Search,
@@ -13,7 +13,6 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // If scrolled down more than 50px, nav becomes transparent
       setTransparent(window.scrollY > 50);
     };
 
