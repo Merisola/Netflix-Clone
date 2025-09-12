@@ -5,7 +5,7 @@ top: 0;
 display: flex;
 justify-content: center;
 align-items: center;
-/* background-color: rgb(148, 132, 132); */
+background-color: rgb(148, 132, 132);
 background-color: rgb(20, 20, 20);
 background-color: transparent;
 height: 10vh;
@@ -15,6 +15,12 @@ transition-timing-function: ease-in;
 z-index: 1;
 background-color: black;
 }
+
+/* Transparent nav when scrolling */
+.nav_transparent {
+  background-color: transparent !important;
+}
+
 
 /* Optional: add a darker background when scrolling */
 .nav_black {
