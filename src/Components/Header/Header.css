@@ -109,3 +109,24 @@
     font-size: 0.9rem;
   }
 }
+
+@media (max-width: 768px) {
+  .navLeft {
+    display: none;
+  }
+  .logo {
+    height: 50px;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .navRight {
+    gap: 10px;
+  }
+  .header_outer_container {
+    height: 50px;
+  }
+}
