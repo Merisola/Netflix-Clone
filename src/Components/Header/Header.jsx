@@ -28,14 +28,20 @@ const Header = () => {
     >
       <div className="header_container">
         <ul className="navLeft">
-          <li>
-            <img src={NetflixLogo} alt="Netflix Logo" className="logo" />
+          <li className="logo-li">
+            <img
+              src={NetflixLogo}
+              alt="Netflix Logo"
+              className="logo"
+              width="100"
+            />
           </li>
           <li>Home</li>
           <li>TV Shows</li>
           <li>Movies</li>
           <li>Latest</li>
           <li>My List</li>
+          <li>Browse by Langue</li>
         </ul>
 
         <ul className="navRight">

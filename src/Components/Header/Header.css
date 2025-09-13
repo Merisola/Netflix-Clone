@@ -1,78 +1,79 @@
-/* Outer container */
+
 .header_outer_container {
- position:sticky;
-top: 0;
-display: flex;
-justify-content: center;
-align-items: center;
-background-color: rgb(148, 132, 132);
-background-color: rgb(20, 20, 20);
-background-color: transparent;
-height: 10vh;
-color: white;
-transition:all 0.5s;
-transition-timing-function: ease-in;
-z-index: 1;
-/* background-color: black; */
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  height: 10vh;
+  color: white;
+  transition: all 0.5s ease-in;
+  z-index: 1;
 }
 
-/* Transparent nav when scrolling */
 .nav_transparent {
   background-color: transparent !important;
 }
 
 
-/* Optional: add a darker background when scrolling */
 .nav_black {
   background-color: rgb(20, 20, 20);
 }
 
-/* Inner container */
+
 .header_container {
   width: 90%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Logo */
+
 .logo {
-  height: 40px;
+  height: 90px;
   cursor: pointer;
 }
 
-/* Nav left & right */
+.navLeft {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+
 .navLeft,
 .navRight {
-  display: flex;
-  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 20px; /* better spacing than margin-left */
+  display: flex;
+  align-items: center;
 }
 
-/* Nav links */
+.navRight {
+  gap: 5px;
+}
+
+
 .navLeft li,
 .navRight li {
   color: rgba(255, 255, 255, 0.85);
   font-weight: 600;
   cursor: pointer;
   position: relative;
+  font-size: 1.3rem;
   transition: color 0.2s ease;
 }
 
-.navLeft li:first-child {
-  margin-left: 0;
-}
 
 .navLeft li:hover,
 .navRight li:hover {
-  color: #e50914; /* Netflix red hover */
+  color: #e50914;
 }
 
-/* Hover underline effect */
-.navLeft li::after,
+
+.navLeft li:not(.logo-li)::after,
 .navRight li::after {
   content: "";
   position: absolute;
@@ -84,7 +85,7 @@ align-items: center;
   transition: width 0.2s ease;
 }
 
-.navLeft li:hover::after,
+.navLeft li:not(.logo-li):hover::after,
 .navRight li:hover::after {
   width: 100%;
 }
@@ -106,6 +107,5 @@ align-items: center;
   .navLeft li,
   .navRight li {
     font-size: 0.9rem;
-    gap: 12px;
   }
 }

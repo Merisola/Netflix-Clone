@@ -25,18 +25,17 @@ const Banner = () => {
 
   const backgroundImage = movie?.backdrop_path
     ? `url("https://image.tmdb.org/t/p/original/${movie.backdrop_path}")`
-    : "none"; // handled in CSS with gradient overlay
-
+    : "none"; 
   const getTitle = () =>
     movie?.title || movie?.name || movie?.original_name || "Untitled";
 
   const truncate = (text, maxLength) =>
     text?.length > maxLength ? text.substring(0, maxLength - 1) + "…" : text;
 
-  // Handle play button click
+ 
   const handleClick = (movie) => {
     if (trailerUrl) {
-      setTrailerUrl(""); // close trailer if already open
+      setTrailerUrl(""); 
     } else {
       movieTrailer(movie?.title || movie?.name || movie?.original_name || "")
         .then((url) => {
@@ -47,7 +46,7 @@ const Banner = () => {
     }
   };
 
-  // YouTube options
+
   const opts = {
     height: "390",
     width: "100%",

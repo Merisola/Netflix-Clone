@@ -10,7 +10,7 @@ const Row = ({ title = "Movies", fetchUrl, isLargeRow = false }) => {
   const [movies, setMovies] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
 
-  // Fetch movies when fetchUrl changes
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -24,10 +24,10 @@ const Row = ({ title = "Movies", fetchUrl, isLargeRow = false }) => {
     fetchData();
   }, [fetchUrl]);
 
-  // Handle trailer play/close
+  
   const handleClick = async (movie) => {
     if (trailerUrl) {
-      setTrailerUrl(""); // close if open
+      setTrailerUrl(""); 
       return;
     }
 
@@ -44,7 +44,6 @@ const Row = ({ title = "Movies", fetchUrl, isLargeRow = false }) => {
     }
   };
 
-  // YouTube player options
   const opts = {
     height: "390",
     width: "100%",
@@ -53,10 +52,10 @@ const Row = ({ title = "Movies", fetchUrl, isLargeRow = false }) => {
 
   return (
     <div className="row">
-      {/* Section title */}
+    
       <h2 className="row__title">{title}</h2>
 
-      {/* Movie posters */}
+ 
       <div className="row__posters">
         {movies.map((movie) => (
           <img
@@ -71,7 +70,7 @@ const Row = ({ title = "Movies", fetchUrl, isLargeRow = false }) => {
         ))}
       </div>
 
-      {/* Trailer section */}
+ 
       {trailerUrl && (
         <div className="row__trailer">
           <YouTube videoId={trailerUrl} opts={opts} />
