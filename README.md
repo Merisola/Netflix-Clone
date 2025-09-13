@@ -1,12 +1,54 @@
-# React + Vite
+# Netflix Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple Netflix-style web application built with **React** and **Vite**, featuring movie rows, trailers, and a clean user interface.
 
-Currently, two official plugins are available:
+## Features
+- Homepage with a **Banner**, **Movie Rows**, and **Footer**
+- Fetches movie data using **Axios** from custom utility requests
+- Watch trailers directly with **YouTube** integration
+- Modern icons with **MUI Icons**
+- Responsive layout and clean design inspired by Netflix
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies Used
+- **React**
+- **Vite**
+- **Axios**
+- **MUI Icons**
+- **YouTube API / movie-trailer npm**
 
-## Expanding the ESLint configuration
+## Installation
+1. Clone the repository:  
+   ```bash
+   git clone <your-repo-url>
+````
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+2. Navigate to the project folder:
+
+   ```bash
+   cd netflix-clone
+   ```
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+4. Run the app:
+
+   ```bash
+   npm run dev
+   ```
+
+Environment Variables
+
+This project requires a movie API key to fetch data. Create a .env file in the root folder and add:
+
+VITE_API_KEY=your_api_key_here
+
+Make sure not to commit your .env file to GitHub for security.
+
+## Usage
+
+* Browse through different movie rows
+* Click on a movie to watch its trailer
+
+
